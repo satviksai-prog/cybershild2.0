@@ -1,79 +1,46 @@
-# 🏍️ HERORIDE — Personal Vehicle & Bike Maintenance Dashboard
+🛡️ Cyber Shield
 
-A modern, responsive, all-in-one personal bike maintenance dashboard built with vanilla **HTML5**, **CSS3**, and **JavaScript**.
+Intelligent Phishing, Scam and Cyber-Fraud Detection
 
----
+Cyber Shield is a simple website that checks if a link, text message, or QR code is a scam. It gives an instant result — Safe, Be Careful, or Dangerous — along with plain-English reasons, so anyone, even non-technical users, can understand it.
 
-## 🎯 Purpose & Core Problem Solved
+Built for HackSprint 2.0, Problem Statement #5: Intelligent Phishing, Scam and Cyber-Fraud Detection.
 
-> **The Problem**: Bike owners often forget their service dates, insurance renewal, pollution certificate (PUC), oil changes, and maintenance, and don't have all this critical information organized in one place.
+📌 Problem
 
-> **The Solution**: **HERORIDE** brings all vehicle telemetry, health scores, live expiry countdowns, interactive calculators, and service logs together into a single, intuitive dashboard.
+Online scams through fake links, fraud messages, and QR codes are increasing fast. Most existing tools are scattered, technical, and built for experts — leaving everyday people, especially elderly and non-tech users, unprotected.
 
----
+✅ Solution
 
-## 🌟 Dashboard Features
+Cyber Shield brings scam detection into one simple place. Paste a link or message, or upload a QR code, and get an instant, easy-to-understand safety check — no sign-up required, no technical knowledge needed.
 
-### 1. Live Vehicle Telemetry Card
-- **My Vehicle**: Hero Xtreme (`Hero Xtreme 160R` — `MH-12-AB-4509`)
-- **Vehicle Health Score**: `92% 🟢` (Dynamic health meter)
-- **Next Service**: `1,250 KM remaining` (with automated milestone calculation)
-- **Fuel Efficiency**: `52 KM/L`
-- **Total Distance**: `18,450 KM` (with quick one-click odometer updater)
-- **Direct Action**: `[ Book Service ]` button
+✨ Features
+🔗 URL Scanner — checks links for fake domains, missing security (HTTPS), risky extensions, and brand impersonation
+💬 Message Scanner — detects urgency language, OTP/PIN requests, prize/lottery bait, and generic greetings
+📷 QR Code Scanner — decodes the hidden link inside a QR code and checks it the same way as a normal URL
+🎯 Risk Score & Verdict — every scan gets a score out of 100, shown as Safe / Be Careful / Dangerous
+🏦 Bank Impersonation Detector — flags fake websites pretending to be real banks or brands
+🧑‍🤝‍🧑 Sender Trust Score — if multiple users report the same sender, it gets flagged for everyone
+🌍 Multi-Language Support — available in English, Hindi, and Telugu
+📚 Learn Section — real scam examples so users can practice spotting them
+🗂️ Scan History — every check is saved automatically for later reference
+🌐 Community Threat Feed — dangerous scans are shared so other users get warned too
+⚙️ How It Works
+User pastes a link/message or uploads a QR code, then clicks Check
+If it's a QR code, the hidden link is decoded first
+The content is checked against known scam patterns
+Each suspicious pattern found adds points to a risk score
+The total score decides the result: Safe, Be Careful, or Dangerous
+Certain serious flags (like bank impersonation) can override the score and force a Dangerous result
+The result and reasons are shown instantly, and saved automatically to the user's history
 
-### 2. Maintenance Status Checklist
-- ✓ **Engine Oil** (*Changed at 16,500 KM*)
-- ✓ **Brake Check** (*Pads at 75% life*)
-- ⚠ **Tyre Replacement** (*Attention: Rear tyre tread low*)
-- ✓ **Battery** (*12.6V Optimal voltage*)
-- ✓ **Chain Lubrication** (*Cleaned & Lubed 250 KM ago*)
-- ✓ **Air Filter** (*Inspected clean*)
+No human review is needed at any step — the entire process is automatic.
 
-### 3. Expiry Countdowns & Compliance Tracker
-- **Insurance Expiry Countdown**: Real-time live countdown timer (Days, Hours, Minutes) with direct policy renewal link.
-- **PUC (Pollution Certificate) Countdown**: Live countdown clock alerting you before expiration.
-- **24/7 Roadside Assistance**: Emergency breakdown helpline link.
-
-### 4. Interactive Calculators & Tools
-- **Fuel & Mileage Calculator**: Real-time calculation of Mileage (`KM/L`) and Running Cost (`₹/KM`).
-- **Maintenance Cost Estimator**: Interactive checkbox estimator for engine oil, filters, chain lube, brake pads, and labor.
-
-### 5. Service Booking Simulation & History
-- **Book Service Modal**: Schedule service at authorized workshops, select packages, choose pickup/drop, and generate an instant **Service Booking Pass** with token ID (e.g. `#HERO-84920`).
-- **Service History Log**: Full historical record table with date, odometer, workshop, work done, cost, and status.
-- **Log Past Service**: Record previous bills directly into your vehicle log.
-
-### 6. Multi-Vehicle Garage Support
-- Pre-loaded with Hero Xtreme and Yamaha FZ-S.
-- One-click **+ Add Vehicle** to track multiple bikes in your garage.
-- Full `localStorage` persistence.
-
----
-
-## 📁 File Structure
-
-```
-My Website/
-├── index.html              # Complete vehicle dashboard HTML5 markup
-├── css/
-│   └── style.css           # Automotive dashboard design system & themes
-├── js/
-│   └── script.js           # Telemetry engine, calculations, countdowns & storage
-├── images/
-│   ├── favicon.svg         # Modern bike code favicon
-│   ├── project-bikecare.svg # Dashboard vector preview
-│   └── hero-tech.svg       # Telemetry visual graphic
-└── README.md               # Documentation
-```
-
----
-
-## 🚀 How to Run Locally
-
-Double-click `index.html` to open it in any browser, or run a local Python server:
-
-```powershell
-python -m http.server 8000
-```
-Then visit `http://localhost:8000`.
+🛠️ Tech Stack
+Frontend: HTML, CSS, JavaScript
+QR Decoding: jsQR
+Backend: Firebase
+Authentication — Google sign-in and anonymous login
+Firestore — stores scan history, community reports, and sender trust data
+Cloud Functions — runs detection logic securely on the server
+Hosting — deploys the website
